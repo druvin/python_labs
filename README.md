@@ -1,6 +1,6 @@
-Я Овчаренко Анна Сергеевна
-
-Лабораторные по программированию и алгоритмизации
+# [Овчаренко Анна Сергеевна](https://daniilshat.ru/) ![](https://github.com/blackcater/blackcater/raw/main/images/Hi.gif) 
+### Бивт-26-6-2
+### Лабораторные по программированию и алгоритмизации
 
 Лабораторная работа №1
 1) <img width="346" height="63" alt="img_01" src="https://github.com/user-attachments/assets/e3d74cb4-af68-4d80-bd63-05ead862a3f9" />
