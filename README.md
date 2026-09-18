@@ -2,6 +2,7 @@
 <h3 align="center">БИВТ-26-6-2
 <h3 align="center">Лабораторные по программированию и алгоритмизации
 #Лабораторная работа №1
+
 1) <img width="346" height="63" alt="img_01" src="https://github.com/user-attachments/assets/e3d74cb4-af68-4d80-bd63-05ead862a3f9" />
 
 2) <img width="277" height="65" alt="img_02" src="https://github.com/user-attachments/assets/9856ab22-6aca-4802-bbcf-87054d38e9d4" />
