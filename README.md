@@ -1,4 +1,4 @@
-# [Овчаренко Анна Сергеевна](https://daniilshat.ru/) ![](https://github.com/blackcater/blackcater/raw/main/images/Hi.gif) 
+# [Овчаренко Анна Сергеевна]
 ### Бивт-26-6-2
 ### Лабораторные по программированию и алгоритмизации
 
