@@ -1,6 +1,6 @@
-<h1 align="center">Овчаренко Анна Сергеевна/a> 
-<h3 align="center">БИВТ-26-6-2/h3>
-<h3 align="center">Лабораторные по программированию и алгоритмизации/h3>
+<h1 align="center">Овчаренко Анна Сергеевна
+<h3 align="center">БИВТ-26-6-2
+<h3 align="center">Лабораторные по программированию и алгоритмизации
 #Лабораторная работа №1
 1) <img width="346" height="63" alt="img_01" src="https://github.com/user-attachments/assets/e3d74cb4-af68-4d80-bd63-05ead862a3f9" />
 
