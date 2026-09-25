@@ -1,12 +1,13 @@
 name = input('Введите ваше ФИО: ').split(' ')
-full_name_mas = [i for i in name if i]
+full_name_list = [i for i in name if i]
 initials = ''
-full_name = ''
+full_name =''
 length = 0
-for i in full_name_mas:
-    initials = i[0] + initials
+for i in full_name_list:
+    initials += i[0].upper()
     length += len(i)
-    full_name = full_name + i + ' '
+    full_name += i + ' '
+full_name = full_name.strip()
 print(f'ФИО: {full_name}')
 print(f'Инициалы: {initials}.')
-print(f'Длина (символов): {length+2}')
+print(f'Длина (символов): {length+len(full_name_list) - 1}')
