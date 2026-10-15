@@ -4,7 +4,7 @@
 ### БИВТ-26-6-2
 ---
 ## Задание А
-"""
+```
 import re
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str: 
     if casefold: 
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     for i in c:
         freq = count_freq(i)
         print(f"{i} -> {freq}; top_n({i}) -> {top_n(freq, 2)}")
-"""
+```
