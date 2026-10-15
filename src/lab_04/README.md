@@ -141,7 +141,7 @@ python -m src.lab04.text_report
 
 Создаст файл `data/report.csv`.
 
-**Дополнительное задание (два или больше файлов):**
+**Для дополнительного задания:**
 
 ```
 python -m src.lab04.text_report data/a.txt data/b.txt
