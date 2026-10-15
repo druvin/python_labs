@@ -4,7 +4,7 @@
 	
 ### Лабораторная работа №1
 
-(src/lab_01/README.md)
+[(src/lab_01/README.md)](https://github.com/druvin/python_labs/blob/main/src/lab_01/README.md)
 
 ### Лабораторная работа №2
 1) <img width="387" height="292" alt="img_01" src="https://github.com/user-attachments/assets/f5a03582-e169-42f7-854d-b5c20bca5783" />
