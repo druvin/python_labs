@@ -50,3 +50,5 @@ if __name__ == "__main__":
         freq = count_freq(i)
         print(f"{i} -> {freq}; top_n({i}) -> {top_n(freq, 2)}")
 ```
+**Вывод**
+![результат вывода]
