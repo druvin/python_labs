@@ -51,4 +51,5 @@ if __name__ == "__main__":
         print(f"{i} -> {freq}; top_n({i}) -> {top_n(freq, 2)}")
 ```
 **Вывод**
-![результат вывода](images/lab_03/1.png)
+<img width="918" height="326" alt="1" src="https://github.com/user-attachments/assets/cb5db226-33d8-4e87-bf48-e12fc478caf8" />
+
