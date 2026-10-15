@@ -50,5 +50,62 @@ if __name__ == "__main__":
         freq = count_freq(i)
         print(f"{i} -> {freq}; top_n({i}) -> {top_n(freq, 2)}")
 ```
+## normalize
+
+Приводит текст к единому формату:
+- Переводит текст в нижний регистр,
+- Заменяет `ё` на `е`,
+- Убирает лишние пробелы и переносы строк.
+
+## tokenize
+
+Разбивает текст на отдельные слова с помощью регулярного выражения, позволяющего сохранять дефисы внутри слов.
+
+## count_freq
+
+Подсчитывает количество повторений каждого слова в формате словаря.
+
+## top_n
+
+Возвращает N самых частых слов в формате словаря.
+
+Сортировка выполняется:
+1. По убыванию частоты.
+2. По алфавиту при равных частотах.
+
 **Вывод**
-![результат вывода]
+
+<img width="918" height="326" alt="1" src="https://github.com/user-attachments/assets/cb5db226-33d8-4e87-bf48-e12fc478caf8" />
+
+---
+## Задание B
+
+**Выводит результат всех реализованных функций для ввода строки в удобном формате.**
+```
+import sys
+from text import normalize, tokenize, count_freq, top_n
+
+text = sys.stdin.read()
+
+words = tokenize(normalize(text))
+freq = count_freq(words)
+
+print(f'Всего слов: {len(words)}')
+print(f'Уникальных слов: {len(freq)}')
+print('Топ-5:')
+
+for word, count in top_n(freq):
+    print(f'{word}:{count}')
+```
+**Вывод**
+
+<img width="435" height="177" alt="2" src="https://github.com/user-attachments/assets/3bdc0a44-c6df-4d92-be02-683082efde6f" />
+
+**Как запустить?**
+```
+python src/lab_03/text_stats.py
+Привет, мир! Привет!!!
+```
+Для завершения `Ctrl-Z`, затем `Enter`.
+
+
