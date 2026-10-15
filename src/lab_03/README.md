@@ -79,6 +79,8 @@ if __name__ == "__main__":
 
 ---
 ## Задание B
+
+**Выводит результат всех реализованных функций для ввода строки в удобном формате.**
 ```
 import sys
 from text import normalize, tokenize, count_freq, top_n
