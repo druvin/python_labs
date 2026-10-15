@@ -2,6 +2,7 @@ import sys
 from text import normalize, tokenize, count_freq, top_n
 
 text = sys.stdin.read()
+
 words = tokenize(normalize(text))
 freq = count_freq(words)
 

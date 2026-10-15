@@ -6,13 +6,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
         text = text.lower()
     if yo2e:
         text = text.replace('ё', 'е').replace('Ё', 'Е')
-    result = ''
-    for ch in text:
-        if ch.isprintable():
-            result += ch
-        else:
-            result += ' '
-    return ' '.join(result.split())
+    return ' '.join(text.split())
 def tokenize(text: str) -> list[str]: 
     return re.findall(r'\w+(?:-\w+)*', text)
 def count_freq(tokens: list[str]) -> dict[str, int]: 
