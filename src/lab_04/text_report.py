@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import csv
 from pathlib import Path
 from typing import Iterable, Sequence
@@ -35,7 +33,6 @@ def write_csv(rows: Iterable[Sequence], path: str | Path,
         for r in rows:
             w.writerow(r)
 
->>>>>>> ef77a70ec841e7f68a10166441c89ae169ee0f33
 import sys
 from pathlib import Path
 from collections import Counter
