@@ -1,45 +1,9 @@
-import csv
-from pathlib import Path
-from typing import Iterable, Sequence
-
-
-def read_text(path: str | Path, encoding: str = "utf-8") -> str:
-    """Читает текст из файла в указанной кодировке."""
-    p = Path(path)
-    # Ошибки FileNotFoundError и UnicodeDecodeError не скрываем.
-    return p.read_text(encoding=encoding)
-
-
-def write_csv(rows: Iterable[Sequence], path: str | Path,
-              header: tuple[str, ...] | None = None) -> None:
-    """Записывает строки в CSV. Число столбцов должно быть одинаковым."""
-    p = Path(path)
-    rows = list(rows)
-
-    if header is not None:
-        columns = len(header)
-    elif len(rows) > 0:
-        columns = len(rows[0])
-    else:
-        columns = 0
-
-    for r in rows:
-        if len(r) != columns:
-            raise ValueError("Разное количество столбцов в CSV")
-
-    with p.open("w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        if header is not None:
-            w.writerow(header)
-        for r in rows:
-            w.writerow(r)
-
 import sys
 from pathlib import Path
 from collections import Counter
 
 from src.lab_03.text import normalize, tokenize
-from src.lab04.io_txt_csv import read_text, write_csv
+from src.lab_04.io_txt_csv import read_text, write_csv
 
 def frequencies_from_text(text: str) -> dict[str, int]:
     """Нормализует текст и считает частоты слов."""
@@ -58,9 +22,10 @@ def print_table(rows):
         print(f"{word:<20} {count:>12}")
 
 def main():
+    data_dir = Path(__file__).resolve().parent / "data"
     files = sys.argv[1:]
     if len(files) == 0:
-        files = ["data/input.txt"]
+        files = [data_dir / "input.txt"]
 
     all_freq = {}
     per_file_rows = []
@@ -78,8 +43,6 @@ def main():
 
         freq = frequencies_from_text(text)
         total_words += sum(freq.values())
-
-        # Отдельные результаты для каждого TXT-файла.
         for word, count in sorted_word_counts(freq):
             per_file_rows.append((Path(filename).name, word, count))
             all_freq[word] = all_freq.get(word, 0) + count
@@ -87,12 +50,12 @@ def main():
     rows = sorted_word_counts(all_freq)
 
     if len(files) == 1:
-        write_csv(rows, "data/report.csv", ("word", "count"))
+        write_csv(rows, data_dir/"report.csv", ("word", "count"))
         print("Отчёт сохранён: data/report.csv")
     else:
-        write_csv(rows, "data/report_total.csv", ("word", "count"))
-        write_csv(per_file_rows, "data/report_per_file.csv", ("file", "word", "count"))
-        print("Отчёты сохранены: data/report_total.csv, data/report_per_file.csv")
+        write_csv(rows, data_dir/"report_total.csv", ("word", "count"))
+        write_csv(per_file_rows, data_dir/"report_per_file.csv", ("file", "word", "count"))
+        print("Отчёты сохранены.")
 
     print("Всего слов:", total_words)
     print("Уникальных слов:", len(all_freq))
