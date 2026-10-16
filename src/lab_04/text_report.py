@@ -78,10 +78,7 @@ def main():
 
         freq = frequencies_from_text(text)
         total_words += sum(freq.values())
-<<<<<<< HEAD
-=======
-
->>>>>>> ef77a70ec841e7f68a10166441c89ae169ee0f33
+        
         for word, count in sorted_word_counts(freq):
             per_file_rows.append((Path(filename).name, word, count))
             all_freq[word] = all_freq.get(word, 0) + count
