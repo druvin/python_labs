@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+=======
+import csv
+from pathlib import Path
+from typing import Iterable, Sequence
+
+
+def read_text(path: str | Path, encoding: str = "utf-8") -> str:
+    """Читает текст из файла в указанной кодировке."""
+    p = Path(path)
+    return p.read_text(encoding=encoding)
+
+
+def write_csv(rows: Iterable[Sequence], path: str | Path,
+              header: tuple[str, ...] | None = None) -> None:
+    """Записывает строки в CSV. Число столбцов должно быть одинаковым."""
+    p = Path(path)
+    rows = list(rows)
+
+    if header is not None:
+        columns = len(header)
+    elif len(rows) > 0:
+        columns = len(rows[0])
+    else:
+        columns = 0
+
+    for r in rows:
+        if len(r) != columns:
+            raise ValueError("Разное количество столбцов в CSV")
+
+    with p.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if header is not None:
+            w.writerow(header)
+        for r in rows:
+            w.writerow(r)
+
+>>>>>>> ef77a70ec841e7f68a10166441c89ae169ee0f33
 import sys
 from pathlib import Path
 from collections import Counter
@@ -43,6 +81,10 @@ def main():
 
         freq = frequencies_from_text(text)
         total_words += sum(freq.values())
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef77a70ec841e7f68a10166441c89ae169ee0f33
         for word, count in sorted_word_counts(freq):
             per_file_rows.append((Path(filename).name, word, count))
             all_freq[word] = all_freq.get(word, 0) + count

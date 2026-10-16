@@ -6,8 +6,6 @@
 ## Задание A
 
 ```
-"""Функции для чтения TXT и записи CSV."""
-
 import csv
 from pathlib import Path
 from typing import Iterable, Sequence
@@ -104,7 +102,6 @@ def main():
         freq = frequencies_from_text(text)
         total_words += sum(freq.values())
 
-        # Отдельные результаты для каждого TXT-файла.
         for word, count in sorted_word_counts(freq):
             per_file_rows.append((Path(filename).name, word, count))
             all_freq[word] = all_freq.get(word, 0) + count
