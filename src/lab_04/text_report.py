@@ -6,7 +6,6 @@ from typing import Iterable, Sequence
 def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     """Читает текст из файла в указанной кодировке."""
     p = Path(path)
-    # Ошибки FileNotFoundError и UnicodeDecodeError не скрываем.
     return p.read_text(encoding=encoding)
 
 
@@ -79,7 +78,6 @@ def main():
         freq = frequencies_from_text(text)
         total_words += sum(freq.values())
 
-        # Отдельные результаты для каждого TXT-файла.
         for word, count in sorted_word_counts(freq):
             per_file_rows.append((Path(filename).name, word, count))
             all_freq[word] = all_freq.get(word, 0) + count
