@@ -56,8 +56,8 @@ import sys
 from pathlib import Path 
 from collections import Counter
 
-from src.lab_03.text import normalize, tokenize 
-from data.lab_04.io_txt_csv import read_text, write_csv
+from lib.text import normalize, tokenize 
+from src.lab_04.io_txt_csv import read_text, write_csv
 
 def frequencies_from_text(text: str) -> dict[str, int]: 
     """Нормализует текст и считает частоты слов.""" 
@@ -77,7 +77,7 @@ def print_table(rows):
         print(f"{word:<20} {count:>12}")
 
 def main(): 
-    data_dir = Path(__file__).resolve().parent.parent
+    data_dir = Path(__file__).resolve().parents[2] / "data"
 
     files = sys.argv[1:]
 
@@ -135,6 +135,7 @@ def main():
 if __name__ == "__main__": main()
 
 ```
+**
 
 **Как запускать**
 
