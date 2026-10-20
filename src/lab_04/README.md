@@ -139,15 +139,13 @@ if __name__ == "__main__": main()
 **Как запускать**
 
 ```
-python -m data.lab_04.text_report
+python -m src.lab_04.text_report
 ```
-
-Создаст файл `data/report.csv`.
 
 **Для дополнительного задания:**
 
 ```
-python -m data.lab04.text_report a.txt b.txt
+python -m src.lab04.text_report a.txt b.txt
 ```
 
 **Вывод**
