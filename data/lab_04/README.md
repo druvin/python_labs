@@ -14,7 +14,6 @@ from typing import Iterable, Sequence
 def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     """Читает текст из файла в указанной кодировке."""
     p = Path(path)
-    # Ошибки FileNotFoundError и UnicodeDecodeError не скрываем.
     return p.read_text(encoding=encoding)
 
 
