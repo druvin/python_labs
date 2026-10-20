@@ -23,7 +23,7 @@ def print_table(rows):
         print(f"{word:<20} {count:>12}")
 
 def main(): 
-    data_dir = Path(file).resolve().parent.parent
+    data_dir = Path(__file__).resolve().parent.parent
 
     files = sys.argv[1:]
 
