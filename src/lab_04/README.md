@@ -144,6 +144,7 @@ if __name__ == "__main__": main()
 `b.txt` - тестовый файл
 `input.txt` - тестовый файл
 `empty.txt` - тестовый файл
+
 **Как запускать???**
 
 Для одного файла (по умолчанию):
@@ -170,9 +171,16 @@ python -m src.lab04.text_report a.txt b.txt
 
 ![alt text](images/lab_04/img_empty_test.png)
 
+![alt text](../../images/lab_04/completely_empty.png)
+`при вводе через консоль. выводит ничего.`
+
 *Для одного заголовка*
 
 ![alt text](images/lab_04/header_only.png)
+
+*При другой кодировке*
+
+![alt text](../../images/lab_04/encoding.png)
 
 *Для нескольких файлов*
 
