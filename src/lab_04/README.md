@@ -147,6 +147,7 @@ if __name__ == "__main__": main()
 **Как запускать???**
 
 Для одного файла (по умолчанию):
+
 ```
 python -m src.lab_04.text_report
 ```
@@ -167,7 +168,11 @@ python -m src.lab04.text_report a.txt b.txt
 
 *Для пустого файла*
 
-![alt text] (images/lab_04/img_empty_test.png)
+![alt text](images/lab_04/img_empty_test.png)
+
+*Для одного заголовка*
+
+![alt text](images/lab_04/header_only.png)
 
 *Для нескольких файлов*
 
