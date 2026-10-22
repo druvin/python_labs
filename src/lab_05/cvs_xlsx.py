@@ -1,3 +1,7 @@
+from pathlib import Path
+from openpyxl import Workbook
+import csv
+
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
     Конвертирует CSV в XLSX.
@@ -6,4 +10,3 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     Лист называется "Sheet1".
     Колонки — автоширина по длине текста (не менее 8 символов).
     """
-    

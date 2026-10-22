@@ -85,7 +85,7 @@ def main():
     if len(files) == 0:
         files = ["input.txt"]
 
-    files = [data_dir / filename for filename in files]
+    files = [data_dir / "lab_04" / filename for filename in files]
 
     all_freq = {}
     per_file_rows = []
