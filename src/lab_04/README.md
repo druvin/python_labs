@@ -187,6 +187,10 @@ python -m src.lab04.text_report a.txt b.txt
 
 ![alt text](../../images/lab_04/encoding.png)
 
+*Если файла не существует или он не найден*
+
+![alt text](../../images/lab_04/missing.png)
+
 *Для нескольких файлов*
 
 ![alt text](../../images/lab_04/image_2+.png)
