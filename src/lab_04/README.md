@@ -177,7 +177,7 @@ python -m src.lab04.text_report a.txt b.txt
 ![Проверка пустого файла](../../images/lab_04/img_empty_test.png)
 
 ![alt text](../../images/lab_04/completely_empty.png)
-`при вводе через консоль. выводит ничего.`
+При вводе через консоль выводит ничего.
 
 *Для одного заголовка*
 
