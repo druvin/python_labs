@@ -2,7 +2,7 @@ import sys
 from pathlib import Path 
 from collections import Counter
 
-from lib.text import normalize, tokenize 
+from src.lib.text import normalize, tokenize 
 from src.lab_04.io_txt_csv import read_text, write_csv
 
 def frequencies_from_text(text: str) -> dict[str, int]: 
