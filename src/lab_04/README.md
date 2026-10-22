@@ -174,14 +174,14 @@ python -m src.lab04.text_report a.txt b.txt
 
 *Для пустого файла*
 
-![alt text](images/lab_04/img_empty_test.png)
+![Проверка пустого файла](../../images/lab_04/img_empty_test.png)
 
 ![alt text](../../images/lab_04/completely_empty.png)
-`при вводе через консоль выводит ничего.`
+`при вводе через консоль. выводит ничего.`
 
 *Для одного заголовка*
 
-![alt text](images/lab_04/header_only.png)
+![CSV только с заголовком](../../images/lab_04/header_only.png)
 
 *При другой кодировке*
 
