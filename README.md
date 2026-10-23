@@ -9,3 +9,5 @@
 ### [(Лабораторная работа №3)](https://github.com/druvin/python_labs/blob/main/src/lab_03/README.md)
 
 ### [(Лабораторная работа №4)](https://github.com/druvin/python_labs/blob/main/src/lab_04/README.md)
+
+### [(Лабораторная работа №5)](https://github.com/druvin/python_labs/blob/main/src/lab_05/README.md)
