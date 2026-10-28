@@ -83,19 +83,27 @@ if __name__ == "__main__":
 ### Запуск
 
 **Запуск cat без нумерации**
+
 ``python -m src.lab_06.cli_text cat --input data/samples_05/people.csv``
+
 ![alt text](../../images/lab_06/cat_without_numbers.png)
 
 **Запуск cat с нумерацией**
+
 ``python -m src.lab_06.cli_text cat --input data/samples_05/people.csv -n``
+
 ![alt text](../../images/lab_06/cat_with_numbers.png)
 
 **Запуск stats без указания слов в топе**
+
 ``python -m src.lab06.cli_text stats --input data/samples/people.txt``
+
 ![alt text](../../images/lab_06/stats_top5.png)
 
 **Запуск stats с указанием слов в топе**
+
 ``python -m src.lab_06.cli_text stats --input data/samples/people.txt --top 3``
+
 ![alt text](../../images/lab_06/stats_top3.png)
 
 ### Обработка ошибок
