@@ -116,7 +116,9 @@ if __name__ == "__main__":
 
 * parser.error() — аргумент --top имеет недопустимое значение.
   
-![alt text](../../images/lab_06/cli_text_top_error.png)
+    ``python -m src.lab_06.cli_text stats --input data/samples/people.txt --top -3``
+  
+    ![alt text](../../images/lab_06/cli_text_top_error.png)
 
 ### Проверка справки --help
 
@@ -207,9 +209,9 @@ if __name__ == "__main__":
 * UnicodeDecodeError — невозможно декодировать содержимое файла с использованием UTF-8.
 * ValueError - при отсутствии важных аргументов.
 
-``python -m src.lab_06.cli_convert json2csv``
+    ``python -m src.lab_06.cli_convert json2csv``
 
-![alt text](../../images/lab_06/cli_convert_value_error.png)
+    ![alt text](../../images/lab_06/cli_convert_value_error.png)
 
 ### Проверка справки --help
 
