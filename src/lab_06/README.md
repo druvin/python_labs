@@ -83,37 +83,43 @@ if __name__ == "__main__":
 ### Запуск
 
 **Запуск cat без нумерации**
-
 ``python -m src.lab_06.cli_text cat --input data/samples_05/people.csv``
-
 ![alt text](../../images/lab_06/cat_without_numbers.png)
 
 **Запуск cat с нумерацией**
-
 ``python -m src.lab_06.cli_text cat --input data/samples_05/people.csv -n``
-
 ![alt text](../../images/lab_06/cat_with_numbers.png)
 
 **Запуск stats без указания слов в топе**
-
 ``python -m src.lab06.cli_text stats --input data/samples/people.txt``
-
 ![alt text](../../images/lab_06/stats_top5.png)
 
 **Запуск stats с указанием слов в топе**
-
 ``python -m src.lab_06.cli_text stats --input data/samples/people.txt --top 3``
-
 ![alt text](../../images/lab_06/stats_top3.png)
 
 ### Обработка ошибок
-* FileNotFoundError — входной файл не существует.
+* FileNotFoundError — входной файл не найден.
+![alt text](../../images/lab_06/cli_text_missing.png)
+
 * UnicodeDecodeError — невозможно декодировать содержимое файла с использованием UTF-8.
-* parser.error() — аргумент --top имеет недопустимое значение или пользователь неправильно указал параметры команды.
+
+* parser.error() — аргумент --top имеет недопустимое значение.
+![alt text](../../images/lab_06/cli_text_top_error.png)
 
 ### Проверка справки --help
 
+* Общая справка по файлу и его функциям
+![](../../images/lab_06/cli_text_help.png)
+* Справка по cat
+![alt text](../../images/lab_06/cli_text_cat_help.png)
+* Справка по stats
+![alt text](../../images/lab_06/cli_text_stats_help.png)
+
+---
 ## CLI_CONVERT
+Программа реализует интерфейс для управления функциямиБ реализованными в ЛР5. С помощью argparse определяются три подкоманды, каждая подкоманда принимает два обязательных аргумента: --in для указания исходного файла и --out для указания выходного файла. После обработки аргументов программа определяет выбранную подкоманду и вызывает соответствующую функцию из ЛР5.
+
 ```
 import argparse
 
@@ -160,6 +166,39 @@ if __name__ == "__main__":
     main()
 ```
 
+### Запуск
+
+**JSON -> CSV**
+``python -m src.lab_06.cli_convert json2csv --in data/samples_05/people.json --out data/out/people_from_json.csv``
+![alt text](../../images/lab_06/json2csv.png)
+
+**CSV -> JSON**
+``python -m src.lab_06.cli_convert csv2json --in data/samples_05/people.csv --out data/out/people_from_csv.json``
+![alt text](../../images/lab_06/csv2json.png)
+
+**CSV -> XLSX**
+``python -m src.lab_06.cli_convert csv2xlsx --in data/samples_05/people.csv --out data/out/people.xlsx``
+![alt text](../../images/lab_06/csv2xlsx.png)
+
 ### Обработка ошибок
+* FileNotFoundError - то же, что и в cli_text.
+* UnicodeDecodeError — невозможно декодировать содержимое файла с использованием UTF-8.
+* ValueError - при отсутствии важных аргументов.
+
+``python -m src.lab_06.cli_convert json2csv``
+
+![alt text](../../images/lab_06/cli_convert_value_error.png)
 
 ### Проверка справки --help
+
+* Общая справка по всем подкомандам
+![](../../images/lab_06/cli_convert_help.png)
+
+* Справка по json2csv
+![](../../images/lab_06/cli_convert_json2csv_help.png)
+
+* Справка по csv2json
+![](../../images/lab_06/cli_convert_csv2json_help.png)
+
+* Справка по csv2xlsx
+![](../../images/lab_06/cli_convert_csv2xlsx_help.png)
