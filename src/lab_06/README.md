@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
 * FileNotFoundError — входной файл не найден.
   
-![alt text](../../images/lab_06/cli_text_missing.png)
+    ![alt text](../../images/lab_06/cli_text_missing.png)
 
 * UnicodeDecodeError — невозможно декодировать содержимое файла с использованием UTF-8.
 
