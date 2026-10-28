@@ -110,10 +110,15 @@ if __name__ == "__main__":
 ### Проверка справки --help
 
 * Общая справка по файлу и его функциям
+
 ![](../../images/lab_06/cli_text_help.png)
+
 * Справка по cat
+  
 ![alt text](../../images/lab_06/cli_text_cat_help.png)
+
 * Справка по stats
+
 ![alt text](../../images/lab_06/cli_text_stats_help.png)
 
 ---
