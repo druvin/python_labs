@@ -1,4 +1,5 @@
 __pycache__/
-*.рус
-
+*.рус/
+.venv/
+data/*.xlsx/
 .vscode/
