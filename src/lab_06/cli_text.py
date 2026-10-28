@@ -1,14 +1,15 @@
 from src.lib.text import normalize, tokenize, count_freq, top_n
+from src.lab_04.io_txt_csv import read_text
 from pathlib import Path
 import argparse
 
 def cat_command(input_path:str, numbers: bool = False) -> None:
     path = Path(input_path)
 
-    if not path.isfile():
+    if not path.is_file():
         raise FileNotFoundError("Файл не найден")
     
-    with open(path, "r", encoding='itf-8') as f:
+    with open(path, "r", encoding='utf-8') as f:
         for num, line in enumerate(f, start = 1):
             if numbers:
                 print(f"{num} {line}", end="")
@@ -19,15 +20,17 @@ def cat_command(input_path:str, numbers: bool = False) -> None:
 def stats_command(input_path: str, top: int = 5) -> None:
     path = Path(input_path)
 
-    if not path.isfile():
+    if not path.is_file():
         raise FileNotFoundError("Файл не найден")
 
-    with open(path, "r", encoding='utf-8') as f:
-        text = read(f)
+    text = read_text(input_path)
     
-    total_words = len(tokenize(normalize(text)))
-    unique_words = len(count_freq(text))
-    top_words = top_n(text, top)
+    tokens = tokenize(normalize(text))
+    freq = count_freq(tokens)
+
+    total_words = len(tokens)
+    unique_words = len(freq)
+    top_words = top_n(freq, top)
 
     print(f'Всего слов: {total_words}')
     print(f'Уникальных слов: {unique_words}')
@@ -41,11 +44,11 @@ def main():
 
     cat_parser = subparsers.add_parser("cat", help = "Выводит содержание файла")
     cat_parser.add_argument("--input", required= True, help = "Считывает путь к входному файлу")
-    cat_parser.add_argument("-n", action = "numbered_true", help = "Выводит номера строк файла")
+    cat_parser.add_argument("-n", action = "store_true", help = "Выводит номера строк файла")
 
     stats_parser = subparsers.add_parser("stats", help = "Частоты слов")
-    stats_parser.add_argument("--input", required = True)
-    stats_parser.add_argument("--top", type = int, default = 5)
+    stats_parser.add_argument("--input", required = True, help = "Считывает путь к входному файлу")
+    stats_parser.add_argument("--top", type = int, default = 5, help = "Топ скольки слов нужно вывести")
 
     args = parser.parse_args()
 
