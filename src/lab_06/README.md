@@ -185,15 +185,21 @@ if __name__ == "__main__":
 ### Запуск
 
 **JSON -> CSV**
+
 ``python -m src.lab_06.cli_convert json2csv --in data/samples_05/people.json --out data/out/people_from_json.csv``
+
 ![alt text](../../images/lab_06/json2csv.png)
 
 **CSV -> JSON**
+
 ``python -m src.lab_06.cli_convert csv2json --in data/samples_05/people.csv --out data/out/people_from_csv.json``
+
 ![alt text](../../images/lab_06/csv2json.png)
 
 **CSV -> XLSX**
+
 ``python -m src.lab_06.cli_convert csv2xlsx --in data/samples_05/people.csv --out data/out/people.xlsx``
+
 ![alt text](../../images/lab_06/csv2xlsx.png)
 
 ### Обработка ошибок
@@ -208,13 +214,17 @@ if __name__ == "__main__":
 ### Проверка справки --help
 
 * Общая справка по всем подкомандам
+  
 ![](../../images/lab_06/cli_convert_help.png)
 
 * Справка по json2csv
+  
 ![](../../images/lab_06/cli_convert_json2csv_help.png)
 
 * Справка по csv2json
+  
 ![](../../images/lab_06/cli_convert_csv2json_help.png)
 
 * Справка по csv2xlsx
+  
 ![](../../images/lab_06/cli_convert_csv2xlsx_help.png)
