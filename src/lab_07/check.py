@@ -17,6 +17,7 @@ def check_sorting(fn, trials=100) -> None:
         result = fn(nums)
         assert result == sorted(nums), f"{fn.__name__} ошиблась на {nums}: {result}"
         assert nums == original, f"{fn.__name__} изменила исходный список"
+    return trials
  
 def check_search() -> None:
     for _ in range(100):
@@ -33,7 +34,7 @@ def check_search() -> None:
         
         for x in targets:
             try:
-                expexted = nums.index(x)
+                expected = nums.index(x)
             except ValueError:
                 expected = -1
             
@@ -42,10 +43,11 @@ def check_search() -> None:
 
             result = binary_search(sorted_nums, x)
             if x in sorted_nums:
-                assert 0 <= result <= len(nums)
-                assert nums[result] == x
+                assert 0 <= result <= len(sorted_nums)
+                assert sorted_nums[result] == x
             else:
-                result = -1
+                assert result == -1
+    return 100
 
 def check_two_sum(trials=100) -> None:
     for _ in range(trials):
@@ -67,13 +69,15 @@ def check_two_sum(trials=100) -> None:
         else:
             assert result_brute  is None
             assert result_fast is None
+    return trials
 
 
     
 if __name__ == "__main__":
     random.seed(42)
+    total = 0
     for fn in (bubble_sort, insertion_sort, selection_sort):
-        check_sorting(fn)
-    check_search()
-    check_two_sum()
-    print("OK: все проверки пройдены")
+        total += check_sorting(fn)
+    total += check_search()
+    total += check_two_sum()
+    print(f"OK: {total} проверок пройдено")

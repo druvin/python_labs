@@ -15,7 +15,7 @@ def binary_search(sorted_nums, x) -> int:
         mid = (lo+hi) // 2
 
         if sorted_nums[mid] == x:
-            print(mid)
+            return mid
         elif sorted_nums[mid]< x:
             lo = mid + 1
         else:

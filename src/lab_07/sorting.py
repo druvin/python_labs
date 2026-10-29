@@ -33,10 +33,11 @@ def selection_sort(nums) -> list:
     """Тот же контракт, что у bubble_sort."""
     nums = list(nums)
     n = len(nums)
+
     for i in range(n):
         min_index = i
         for j in range(i+1, n):
             if nums[j] < nums[min_index]:
-                min_endex = j
+                min_index = j
         nums[i], nums[min_index] = nums[min_index], nums[i] 
     return nums
