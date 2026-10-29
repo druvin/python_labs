@@ -1,5 +1,4 @@
 import csv
-from pathlib import Path
 from src.lab_04.io_txt_csv import write_csv
 
 import timeit
@@ -66,6 +65,7 @@ def bench_search() -> list[tuple[str, int, str, str]]:
         rows.append(("two_sum", n, "two_sum_fast", f"{t_tsf:.6f}"))
     
     return rows
+
 def main():
     """Собирает все полученные списки из ранее реализованых функций в CSV и выводит сводную таблицу в консоль"""
     header = ("task", "n", "impl", "seconds")

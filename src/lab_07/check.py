@@ -70,8 +70,6 @@ def check_two_sum(trials=100) -> None:
             assert result_brute  is None
             assert result_fast is None
     return trials
-
-
     
 if __name__ == "__main__":
     random.seed(42)
